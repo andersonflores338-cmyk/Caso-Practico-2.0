@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Eventos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Sistema de Gestión de Eventos</h1>
+</header>
+
+<nav>
+    <button onclick="mostrarSeccion('eventos')">Eventos</button>
+    <button onclick="mostrarSeccion('ubicaciones')">Ubicaciones</button>
+    <button onclick="mostrarSeccion('contactos')">Contactos</button>
+</nav>
+
+<main>
+    <!-- EVENTOS -->
+    <section id="eventos" class="seccion">
+        <h2>Registrar Evento</h2>
+        <input type="text" id="tituloEvento" placeholder="Título">
+        <input type="text" id="invitadosEvento" placeholder="Invitados">
+        <input type="datetime-local" id="fechaEvento">
+        <input type="text" id="zonaEvento" placeholder="Zona horaria">
+        <textarea id="descripcionEvento" placeholder="Descripción"></textarea>
+        <input type="text" id="lugarEvento" placeholder="Lugar">
+        <button onclick="guardarEvento()">Guardar Evento</button>
+
+        <ul id="listaEventos"></ul>
+    </section>
+
+    <!-- UBICACIONES -->
+    <section id="ubicaciones" class="seccion oculto">
+        <h2>Registrar Ubicación</h2>
+        <input type="text" id="tituloUbicacion" placeholder="Título">
+        <input type="text" id="direccionUbicacion" placeholder="Dirección">
+        <input type="text" id="coordenadasUbicacion" placeholder="Coordenadas">
+        <button onclick="guardarUbicacion()">Guardar Ubicación</button>
+
+        <ul id="listaUbicaciones"></ul>
+    </section>
+
+    <!-- CONTACTOS -->
+    <section id="contactos" class="seccion oculto">
+        <h2>Registrar Contacto</h2>
+        <input type="text" id="saludoContacto" placeholder="Saludo">
+        <input type="text" id="nombreContacto" placeholder="Nombre completo">
+        <input type="text" id="cedulaContacto" placeholder="Identificación">
+        <input type="email" id="correoContacto" placeholder="Correo electrónico">
+        <input type="tel" id="telefonoContacto" placeholder="Teléfono">
+        <button onclick="guardarContacto()">Guardar Contacto</button>
+
+        <ul id="listaContactos"></ul>
+    </section>
+</main>
+
+<script src="js/app.js"></script>
+</body>
+</html>
